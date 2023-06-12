@@ -50,14 +50,28 @@ public:
         return 3.14 * a * a;
     }
     float Keliling(int a) {
-        return * a * a;
+        return 4 * a;
     }
 };
 
 int main() {
-	void bidangDatar() {
+    bidangDatar* obj;
 
-	}
+    // Lingkaran
+    obj = new Lingkaran;
+    obj->input();
+    cout << "Luas Lingkaran = " << obj->Luas(obj->getX()) << endl;
+    cout << "Keliling Lingkaran = " << obj->Keliling(obj->getX()) << endl;
+    delete obj;
+
+    cout << endl;
+
+    // Bujursangkar
+    obj = new Bujursangkar;
+    obj->input();
+    cout << "Luas Bujursangkar = " << obj->Luas(obj->getX()) << endl;
+    cout << "Keliling Bujursangkar = " << obj->Keliling(obj->getX()) << endl;
+    delete obj;
+
+    return 0;
 }
-
- 
